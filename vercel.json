@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "yarn install --inline-builds",
+  "buildCommand": "npx nx build twenty-front",
+  "outputDirectory": "packages/twenty-front/build",
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--max-old-space-size=8192",
+      "REACT_APP_SERVER_BASE_URL": "http://localhost:3000",
+      "VITE_BUILD_SOURCEMAP": "false"
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
